@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- إعدادات الصفحة الأساسية والخطوط المستخدمة في التصميم -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090c1f" />
+    <meta
+      name="description"
+      content="Cosmic & Mysterious is a cinematic interplanetary travel experience."
+    />
+    <title>Cosmic &amp; Mysterious | Leave Earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&amp;family=Cormorant+Garamond:wght@500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- الخلفية الفضائية: السدم والنجوم والشهب المتحركة -->
+    <div class="space-background" aria-hidden="true">
+      <div class="nebula nebula-one"></div>
+      <div class="nebula nebula-two"></div>
+      <div class="starfield"></div>
+      <span class="shooting-star shooting-star-one"></span>
+      <span class="shooting-star shooting-star-two"></span>
+      <span class="shooting-star shooting-star-three"></span>
+    </div>
+
+    <!-- الحاوية الرئيسية التي تضم كل محتوى الموقع -->
+    <main class="page-shell">
+      <!-- العبارة العلوية وهوية الشركة -->
+      <p class="future-line">The Future is closer than you think</p>
+
+      <header class="brand-header">
+        <a
+          class="brand-mark"
+          href="#top"
+          aria-label="Cosmic and Mysterious home"
+        >
+          <span class="orbit orbit-left"></span>
+          <span class="orbit orbit-right"></span>
+          <span class="brand-core">C</span>
+        </a>
+        <div class="brand-lockup">
+          <h1>Cosmic <span>&amp;</span> Mysterious</h1>
+          <p>Interplanetary travel, reimagined.</p>
+        </div>
+      </header>
+
+      <!-- الواجهة الأولى التي تحتوي على الرسالة ونموذج إدخال الاسم -->
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="eyebrow-dot"></span> Private flight network / 2049
+          </p>
+          <h2>Leave Earth,<br /><em>find your world.</em></h2>
+          <p class="hero-text">
+            Leave Earth, and go to any planet you want. Your next horizon is
+            only a boarding pass away.
+          </p>
+        </div>
+
+        <div class="login-panel" aria-label="Flight login">
+          <div class="panel-heading">
+            <span class="panel-kicker">Welcome aboard</span>
+            <h3>Begin your journey</h3>
+            <p>Sign in to unlock your personal flight deck.</p>
+          </div>
+          <!-- نموذج الترحيب: نطلب اسم المستخدم فقط قبل فتح لوحة الرحلات -->
+          <form id="login-form">
+            <label for="guest-name">Your name</label>
+            <div class="input-wrap">
+              <span class="input-icon">✦</span>
+              <input
+                id="guest-name"
+                name="guestName"
+                type="text"
+                placeholder="Write your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <button class="launch-button enter-button" type="submit" disabled>
+              <span>ENTER</span><strong>↗</strong>
+            </button>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- لوحة الرحلات التي تظهر بعد الضغط على زر ENTER -->
+      <section
+        class="explorer-page"
+        id="destinations"
+        aria-labelledby="destinations-title"
+      >
+        <div class="explorer-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow-dot"></span> Your private flight deck
+            </p>
+            <h2 id="destinations-title">Choose your <em>new world.</em></h2>
+            <p class="hero-text">
+              Seven worlds. One extraordinary decision. Prices include a
+              round-trip flight from Earth.
+            </p>
+          </div>
+          <div class="route-status">
+            <span class="signal"></span><span>Routes open / 2049</span>
+          </div>
+        </div>
+        <!-- بطاقات الكواكب، وكل بطاقة قابلة للضغط لعرض التفاصيل -->
+        <div class="planet-grid">
+          <article
+            class="planet-card"
+            data-planet="Mercury"
+            tabindex="0"
+            role="button"
+            aria-label="View Mercury details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA00170/PIA00170~orig.jpg"
+              alt="Mercury"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">01 / INNER ORBIT</span>
+              <h3>Mercury</h3>
+              <p>Quicksilver horizons</p>
+              <strong>$4.8M <small>/ traveler</small></strong>
+            </div>
+          </article>
+          <article
+            class="planet-card"
+            data-planet="Venus"
+            tabindex="0"
+            role="button"
+            aria-label="View Venus details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA00271/PIA00271~orig.jpg"
+              alt="Venus"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">02 / INNER ORBIT</span>
+              <h3>Venus</h3>
+              <p>The golden cloud world</p>
+              <strong>$3.9M <small>/ traveler</small></strong>
+            </div>
+          </article>
+          <article
+            class="planet-card"
+            data-planet="Mars"
+            tabindex="0"
+            role="button"
+            aria-label="View Mars details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA00407/PIA00407~orig.jpg"
+              alt="Mars"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">03 / INNER ORBIT</span>
+              <h3>Mars</h3>
+              <p>Red dust, wide-open skies</p>
+              <strong>$2.4M <small>/ traveler</small></strong>
+            </div>
+          </article>
+          <article
+            class="planet-card"
+            data-planet="Jupiter"
+            tabindex="0"
+            role="button"
+            aria-label="View Jupiter details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA02820/PIA02820~orig.jpg"
+              alt="Jupiter"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">04 / OUTER ORBIT</span>
+              <h3>Jupiter</h3>
+              <p>Storms on a colossal scale</p>
+              <strong>$8.6M <small>/ traveler</small></strong>
+            </div>
+          </article>
+          <article
+            class="planet-card"
+            data-planet="Saturn"
+            tabindex="0"
+            role="button"
+            aria-label="View Saturn details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA01364/PIA01364~orig.jpg"
+              alt="Saturn"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">05 / OUTER ORBIT</span>
+              <h3>Saturn</h3>
+              <p>Ring-side, all to yourself</p>
+              <strong>$9.2M <small>/ traveler</small></strong>
+            </div>
+          </article>
+          <article
+            class="planet-card"
+            data-planet="Uranus"
+            tabindex="0"
+            role="button"
+            aria-label="View Uranus details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA18182/PIA18182~orig.jpg"
+              alt="Uranus"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">06 / OUTER ORBIT</span>
+              <h3>Uranus</h3>
+              <p>A blue world turned sideways</p>
+              <strong>$11.7M <small>/ traveler</small></strong>
+            </div>
+          </article>
+          <article
+            class="planet-card"
+            data-planet="Neptune"
+            tabindex="0"
+            role="button"
+            aria-label="View Neptune details"
+          >
+            <img
+              src="https://images-assets.nasa.gov/image/PIA01492/PIA01492~orig.jpg"
+              alt="Neptune"
+              loading="lazy"
+            />
+            <div class="planet-info">
+              <span class="planet-number">07 / OUTER ORBIT</span>
+              <h3>Neptune</h3>
+              <p>Blue silence at the edge</p>
+              <strong>$13.5M <small>/ traveler</small></strong>
+            </div>
+          </article>
+        </div>
+        <p class="explorer-note">
+          Every ticket includes orbital training, a private cabin, and a view no
+          one has seen before.
+        </p>
+      </section>
+
+      <!-- النافذة المنبثقة التي تعرض صور ومعلومات الكوكب -->
+      <div
+        class="planet-modal"
+        id="planet-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-planet-name"
+        hidden
+      >
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content">
+          <button
+            class="modal-close"
+            type="button"
+            data-close-modal
+            aria-label="Close planet details"
+          >
+            &times;
+          </button>
+          <div class="modal-heading">
+            <div>
+              <span class="panel-kicker" id="modal-planet-type"
+                >DESTINATION PROFILE</span
+              >
+              <h2 id="modal-planet-name">Mars</h2>
+              <p id="modal-planet-summary">Red dust, wide-open skies</p>
+            </div>
+            <button
+              class="fullscreen-button"
+              id="fullscreen-button"
+              type="button"
+            >
+              View fullscreen <span>↗</span>
+            </button>
+          </div>
+          <div class="planet-gallery" id="planet-gallery"></div>
+          <div class="modal-details">
+            <p id="modal-planet-description"></p>
+            <div class="modal-facts" id="modal-planet-facts"></div>
+            <div class="modal-buy-row">
+              <strong id="modal-planet-price"
+                >$2.4M <small>/ traveler</small></strong
+              >
+              <div class="buy-state">
+                <button type="button" disabled>Buy ticket</button
+                ><span>OUT OF STOCK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- التذييل واسم المصمم في شكل توقيع -->
+      <footer class="site-footer">
+        <p><span class="signal"></span> All systems operational</p>
+        <p class="made-by">Made by <strong>Mohamed Medhat</strong></p>
+        <p class="coordinates">34° 03' N &nbsp; 118° 14' W</p>
+      </footer>
+    </main>
+    <!-- تشغيل التفاعل: الاسم، الكواكب، المعرض، ووضع fullscreen -->
+    <script src="app.js"></script>
+  </body>
+</html>
